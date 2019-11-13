@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js\jquery-3.4.1.js"></script>
+    <script>
+        // 适用原生javascript实现
+        window.onload = function () {
+            var btn1 = document.getElementById('btn1')
+            btn1.onclick = function () {
+                var username = document.getElementById('username').value
+                alert(username)
+            }
+        }
+    </script>
+    <script>
+        // 使用jQuery API实现
+        // 使用jQuery核心函数($/jQuery)
+        // jQuery核心对象
+        $(function () {
+            $('#btn2').click(function () {
+                var username = $('#username').val()
+                console.log(username)
+                alert(username)
+            })
+        })
+    </script>
+
+
+</head>
+
+<body>
+    <form action="#">
+        <input type="text" id="username" placeholder="请输入您的名字">
+        <button id="btn1">确定（原生实现）</button>
+        <button id="btn2">确定（jQuery实现）</button>
+    </form>
+</body>
+
+</html>
